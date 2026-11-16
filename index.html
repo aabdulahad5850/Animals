@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2">
+            <i class="fa-solid fa-paw box3"></i>
+            <span>Pawsome</span>
+        </div>
+    </div>
+
+    <header class="box4">
+        <nav class="box5">
+            <a href="#" class="box6">
+                <i class="fa-solid fa-paw"></i> Pawsome
+            </a>
+            <div class="box7">
+                <a href="#hero" class="box8">Home</a>
+                <a href="#pets" class="box8">Pets</a>
+                <a href="#stories" class="box8">Happy Tails</a>
+                <a href="#tips" class="box8">Care Tips</a>
+                <a href="#faq" class="box8">FAQ</a>
+                <a href="#donate" class="box8">Donate</a>
+            </div>
+            <div class="box81">
+                <label class="box127">
+                    <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+                    <span class="box128">
+                        <i class="fa-solid fa-sun box129"></i>
+                        <i class="fa-solid fa-moon box130"></i>
+                        <span class="box131"></span>
+                    </span>
+                </label>
+                <button class="box82" onclick="toggleWishlist()">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="box83" id="wishCount">0</span>
+                </button>
+                <button class="box9" onclick="document.getElementById('pets').scrollIntoView({behavior: 'smooth'})">Adopt Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="box10">
+        <section id="hero" class="box11">
+            <div class="box12 box-reveal">
+                <span class="box13">Find Your New Best Friend</span>
+                <h1 class="box14">Give Them A Second Chance At Love</h1>
+                <p class="box15">Thousands of loving pets are waiting for a warm home and a caring family. Browse our listings and open your heart to a loyal companion.</p>
+                <div class="box16">
+                    <button class="box17" onclick="document.getElementById('pets').scrollIntoView({behavior: 'smooth'})">Meet Our Pets</button>
+                    <a href="#stories" class="box18">Success Stories</a>
+                </div>
+            </div>
+            <div class="box19 box-reveal">
+                <div class="box132">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="" class="box20">
+                </div>
+            </div>
+        </section>
+
+        <section class="box137">
+            <div class="box138">
+                <div class="box139 box-reveal">
+                    <span class="box140" data-target="1450">0</span>
+                    <span class="box141">Pets Adopted</span>
+                </div>
+                <div class="box139 box-reveal">
+                    <span class="box140" data-target="320">0</span>
+                    <span class="box141">Active Volunteers</span>
+                </div>
+                <div class="box139 box-reveal">
+                    <span class="box140" data-target="98">0</span>
+                    <span class="box141">Happy Rate %</span>
+                </div>
+                <div class="box139 box-reveal">
+                    <span class="box140" data-target="12">0</span>
+                    <span class="box141">Years Of Care</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="box21">
+            <div class="box22">
+                <div class="box23 box-reveal">
+                    <div class="box133">
+                        <i class="fa-solid fa-shield-dog box24"></i>
+                    </div>
+                    <h3 class="box25">Fully Vaccinated</h3>
+                    <p class="box26">All our pets receive complete medical checkups and vaccinations before adoption.</p>
+                </div>
+                <div class="box23 box-reveal">
+                    <div class="box133">
+                        <i class="fa-solid fa-heart-pulse box24"></i>
+                    </div>
+                    <h3 class="box25">Behavior Tested</h3>
+                    <p class="box26">Our specialists evaluate each animal to ensure they fit wonderfully into your family.</p>
+                </div>
+                <div class="box23 box-reveal">
+                    <div class="box133">
+                        <i class="fa-solid fa-hands-holding-child box24"></i>
+                    </div>
+                    <h3 class="box25">Lifelong Support</h3>
+                    <p class="box26">We provide guidance, training tips, and support even after you take your pet home.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pets" class="box27">
+            <div class="box28">
+                <h2 class="box29 box-reveal">Meet Pets Looking For Homes</h2>
+                <p class="box30 box-reveal">Search by name or filter by category to find your loyal friend</p>
+                
+                <div class="box142 box-reveal">
+                    <div class="box143">
+                        <i class="fa-solid fa-magnifying-glass box144"></i>
+                        <input type="text" id="petSearch" class="box145" placeholder="Search by name or breed..." oninput="searchPets()">
+                    </div>
+                    <div class="box31">
+                        <button class="box32 box-active" onclick="filterPets('all', this)">All Pets</button>
+                        <button class="box32" onclick="filterPets('dog', this)">Dogs</button>
+                        <button class="box32" onclick="filterPets('cat', this)">Cats</button>
+                        <button class="box32" onclick="filterPets('other', this)">Others</button>
+                    </div>
+                </div>
+
+                <div class="box33">
+                    <div class="box34 box-reveal" data-category="dog" data-name="max golden retriever">
+                        <div class="box84">
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="" class="box35">
+                            <button class="box85" onclick="toggleFavorite('Max', 'Golden Retriever', 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80', this)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="box36">
+                            <div class="box37">
+                                <span class="box38">Max</span>
+                                <span class="box39">Dog &bull; Golden Retriever</span>
+                            </div>
+                            <div class="box40">
+                                <span class="box41"><i class="fa-solid fa-cake-candles"></i> 1 Year</span>
+                                <span class="box41"><i class="fa-solid fa-venus-mars"></i> Male</span>
+                            </div>
+                            <p class="box42">Very energetic, loves playing catch in the yard, and gets along great with kids.</p>
+                            <button class="box43" onclick="openModal('Max')">Adopt Me</button>
+                        </div>
+                    </div>
+
+                    <div class="box34 box-reveal" data-category="cat" data-name="luna british shorthair">
+                        <div class="box84">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="" class="box35">
+                            <button class="box85" onclick="toggleFavorite('Luna', 'British Shorthair', 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80', this)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="box36">
+                            <div class="box37">
+                                <span class="box38">Luna</span>
+                                <span class="box39">Cat &bull; British Shorthair</span>
+                            </div>
+                            <div class="box40">
+                                <span class="box41"><i class="fa-solid fa-cake-candles"></i> 8 Months</span>
+                                <span class="box41"><i class="fa-solid fa-venus-mars"></i> Female</span>
+                            </div>
+                            <p class="box42">Calm and affectionate companion who loves napping in sunny spots and gentle purrs.</p>
+                            <button class="box43" onclick="openModal('Luna')">Adopt Me</button>
+                        </div>
+                    </div>
+
+                    <div class="box34 box-reveal" data-category="dog" data-name="rocky german shepherd">
+                        <div class="box84">
+                            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80" alt="" class="box35">
+                            <button class="box85" onclick="toggleFavorite('Rocky', 'German Shepherd', 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=600&q=80', this)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="box36">
+                            <div class="box37">
+                                <span class="box38">Rocky</span>
+                                <span class="box39">Dog &bull; German Shepherd</span>
+                            </div>
+                            <div class="box40">
+                                <span class="box41"><i class="fa-solid fa-cake-candles"></i> 2 Years</span>
+                                <span class="box41"><i class="fa-solid fa-venus-mars"></i> Male</span>
+                            </div>
+                            <p class="box42">Loyal, highly intelligent, protective guard dog with a very gentle heart for family.</p>
+                            <button class="box43" onclick="openModal('Rocky')">Adopt Me</button>
+                        </div>
+                    </div>
+
+                    <div class="box34 box-reveal" data-category="cat" data-name="simba persian mix">
+                        <div class="box84">
+                            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80" alt="" class="box35">
+                            <button class="box85" onclick="toggleFavorite('Simba', 'Persian Mix', 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=600&q=80', this)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="box36">
+                            <div class="box37">
+                                <span class="box38">Simba</span>
+                                <span class="box39">Cat &bull; Persian Mix</span>
+                            </div>
+                            <div class="box40">
+                                <span class="box41"><i class="fa-solid fa-cake-candles"></i> 1.5 Years</span>
+                                <span class="box41"><i class="fa-solid fa-venus-mars"></i> Male</span>
+                            </div>
+                            <p class="box42">Fluffy, curious explorer who enjoys high perches and interactive feather toys.</p>
+                            <button class="box43" onclick="openModal('Simba')">Adopt Me</button>
+                        </div>
+                    </div>
+
+                    <div class="box34 box-reveal" data-category="other" data-name="bunny rabbit netherland dwarf">
+                        <div class="box84">
+                            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=600&q=80" alt="" class="box35">
+                            <button class="box85" onclick="toggleFavorite('Bunny', 'Netherland Dwarf', 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=600&q=80', this)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="box36">
+                            <div class="box37">
+                                <span class="box38">Bunny</span>
+                                <span class="box39">Rabbit &bull; Netherland Dwarf</span>
+                            </div>
+                            <div class="box40">
+                                <span class="box41"><i class="fa-solid fa-cake-candles"></i> 6 Months</span>
+                                <span class="box41"><i class="fa-solid fa-venus-mars"></i> Female</span>
+                            </div>
+                            <p class="box42">Quiet, soft, loves munching on fresh carrots and clover leaves in peaceful settings.</p>
+                            <button class="box43" onclick="openModal('Bunny')">Adopt Me</button>
+                        </div>
+                    </div>
+
+                    <div class="box34 box-reveal" data-category="dog" data-name="bella beagle">
+                        <div class="box84">
+                            <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=600&q=80" alt="" class="box35">
+                            <button class="box85" onclick="toggleFavorite('Bella', 'Beagle', 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=600&q=80', this)">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="box36">
+                            <div class="box37">
+                                <span class="box38">Bella</span>
+                                <span class="box39">Dog &bull; Beagle</span>
+                            </div>
+                            <div class="box40">
+                                <span class="box41"><i class="fa-solid fa-cake-candles"></i> 1 Year</span>
+                                <span class="box41"><i class="fa-solid fa-venus-mars"></i> Female</span>
+                            </div>
+                            <p class="box42">Friendly hound with an amazing nose, loves long outdoor walks and belly rubs.</p>
+                            <button class="box43" onclick="openModal('Bella')">Adopt Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories" class="box86">
+            <div class="box87">
+                <span class="box13 box-reveal">Happy Tails</span>
+                <h2 class="box29 box-reveal">Heartwarming Adoption Stories</h2>
+                <p class="box30 box-reveal">See how love and patience transformed the lives of our rescued friends</p>
+
+                <div class="box88">
+                    <div class="box89 box-reveal">
+                        <div class="box134">
+                            <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=600&q=80" alt="" class="box90">
+                        </div>
+                        <div class="box91">
+                            <span class="box92">Adopted 6 Months Ago</span>
+                            <h3 class="box93">Charlie & The Miller Family</h3>
+                            <p class="box94">"When we first met Charlie, he was shy and scared of loud noises. Today, he greets us every morning with endless tail wags and loves hiking with our kids."</p>
+                        </div>
+                    </div>
+
+                    <div class="box89 box-reveal">
+                        <div class="box134">
+                            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=600&q=80" alt="" class="box90">
+                        </div>
+                        <div class="box91">
+                            <span class="box92">Adopted 1 Year Ago</span>
+                            <h3 class="box93">Milo & Sarah</h3>
+                            <p class="box94">"Milo was found abandoned in a rainy alley. After proper medical care at Pawsome, he became the sweetest apartment companion anyone could ever ask for."</p>
+                        </div>
+                    </div>
+
+                    <div class="box89 box-reveal">
+                        <div class="box134">
+                            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=600&q=80" alt="" class="box90">
+                        </div>
+                        <div class="box91">
+                            <span class="box92">Adopted 4 Months Ago</span>
+                            <h3 class="box93">Daisy & David</h3>
+                            <p class="box94">"Adopting Daisy was the best decision of my life. She brought warmth, laughter, and daily outdoor routines into my quiet home."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="box44">
+            <div class="box45">
+                <div class="box46 box-reveal">
+                    <div class="box135">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="" class="box47">
+                    </div>
+                </div>
+                <div class="box48">
+                    <h2 class="box49 box-reveal">How Adoption Works</h2>
+                    <p class="box50 box-reveal">Bringing a new family member home is a simple and rewarding process. Follow these four steps to start your journey.</p>
+                    
+                    <div class="box51 box-reveal">
+                        <div class="box52">1</div>
+                        <div>
+                            <h4 class="box53">Browse & Choose</h4>
+                            <p class="box54">Explore our online catalog and find a pet whose personality matches your lifestyle.</p>
+                        </div>
+                    </div>
+
+                    <div class="box51 box-reveal">
+                        <div class="box52">2</div>
+                        <div>
+                            <h4 class="box53">Submit Application</h4>
+                            <p class="box54">Fill out our quick adoption form with your contact details and home environment info.</p>
+                        </div>
+                    </div>
+
+                    <div class="box51 box-reveal">
+                        <div class="box52">3</div>
+                        <div>
+                            <h4 class="box53">Meet In Person</h4>
+                            <p class="box54">Visit our shelter to spend time with your chosen pet and confirm the connection.</p>
+                        </div>
+                    </div>
+
+                    <div class="box51 box-reveal">
+                        <div class="box52">4</div>
+                        <div>
+                            <h4 class="box53">Welcome Home</h4>
+                            <p class="box54">Complete the adoption paperwork and take your new best friend to their forever home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="box95">
+            <div class="box96">
+                <span class="box13 box-reveal">Pet Care Blog</span>
+                <h2 class="box29 box-reveal">Essential Care Tips & Guides</h2>
+                <p class="box30 box-reveal">Helpful advice to prepare your home and keep your pets healthy and happy</p>
+
+                <div class="box97">
+                    <article class="box98 box-reveal">
+                        <div class="box136">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="" class="box99">
+                        </div>
+                        <div class="box100">
+                            <span class="box101"><i class="fa-regular fa-clock"></i> 4 Min Read</span>
+                            <h3 class="box102">First 7 Days With Your Rescue Dog</h3>
+                            <p class="box103">Learn how to create a calm safe space, establish feeding schedules, and build trust step by step during the crucial first week.</p>
+                            <button class="box104" onclick="openArticle('First 7 Days With Your Rescue Dog', 'Bringing a rescue dog home requires patience and structure. Set up a quiet corner with a comfortable bed, keep visitors minimal for the first few days, and maintain consistent walking and feeding times so your new friend feels secure.')">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="box98 box-reveal">
+                        <div class="box136">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="" class="box99">
+                        </div>
+                        <div class="box100">
+                            <span class="box101"><i class="fa-regular fa-clock"></i> 3 Min Read</span>
+                            <h3 class="box102">Cat-Proofing Your Living Space</h3>
+                            <p class="box103">Discover simple adjustments to keep indoor cats entertained, safe from toxic houseplants, and comfortable in vertical spaces.</p>
+                            <button class="box104" onclick="openArticle('Cat-Proofing Your Living Space', 'Before welcoming a cat, secure window screens, hide loose electrical cords, and remove toxic plants like lilies. Provide scratching posts and elevated perches to satisfy their natural climbing instincts.')">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="box98 box-reveal">
+                        <div class="box136">
+                            <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?auto=format&fit=crop&w=600&q=80" alt="" class="box99">
+                        </div>
+                        <div class="box100">
+                            <span class="box101"><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+                            <h3 class="box102">Balanced Nutrition For Growing Pets</h3>
+                            <p class="box103">Understand protein requirements, healthy treats, and hydration habits tailored for puppies, kittens, and senior companions.</p>
+                            <button class="box104" onclick="openArticle('Balanced Nutrition For Growing Pets', 'A high-protein, age-appropriate diet supports strong immunity and healthy joints. Always keep fresh water accessible and consult your vet before switching food brands or introducing supplements.')">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="box146">
+            <div class="box147">
+                <span class="box13 box-reveal">Common Questions</span>
+                <h2 class="box29 box-reveal">Frequently Asked Questions</h2>
+                <p class="box30 box-reveal">Everything you need to know before welcoming your new pet</p>
+
+                <div class="box148">
+                    <div class="box149 box-reveal">
+                        <button class="box150" onclick="toggleFaq(this)">
+                            <span>Are there any adoption fees?</span>
+                            <i class="fa-solid fa-plus box151"></i>
+                        </button>
+                        <div class="box152">
+                            <p>We ask for a small symbolic contribution to help cover vaccinations, microchipping, and medical checkups before the pet goes home with you.</p>
+                        </div>
+                    </div>
+
+                    <div class="box149 box-reveal">
+                        <button class="box150" onclick="toggleFaq(this)">
+                            <span>Can I adopt if I live in an apartment?</span>
+                            <i class="fa-solid fa-plus box151"></i>
+                        </button>
+                        <div class="box152">
+                            <p>Yes! Many of our dogs, cats, and rabbits thrive in apartment settings as long as they receive daily walks, playtime, and mental stimulation.</p>
+                        </div>
+                    </div>
+
+                    <div class="box149 box-reveal">
+                        <button class="box150" onclick="toggleFaq(this)">
+                            <span>What documents do I need to bring?</span>
+                            <i class="fa-solid fa-plus box151"></i>
+                        </button>
+                        <div class="box152">
+                            <p>Simply bring a valid government-issued ID and proof of address when visiting our shelter to finalize the adoption agreement.</p>
+                        </div>
+                    </div>
+
+                    <div class="box149 box-reveal">
+                        <button class="box150" onclick="toggleFaq(this)">
+                            <span>What if my current pets do not get along at first?</span>
+                            <i class="fa-solid fa-plus box151"></i>
+                        </button>
+                        <div class="box152">
+                            <p>Our behavior specialists offer free post-adoption consultations and slow introduction guides to help all pets adjust peacefully.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="donate" class="box105">
+            <div class="box106 box-reveal">
+                <div class="box107">
+                    <span class="box13">Support Our Mission</span>
+                    <h2 class="box49">Can't Adopt? You Can Still Save Lives</h2>
+                    <p class="box50">Every contribution provides nutritious meals, warm shelter, and life-saving veterinary treatments for animals waiting for their forever families.</p>
+                    <div class="box108">
+                        <div class="box109">
+                            <i class="fa-solid fa-bowl-food box110"></i>
+                            <div>
+                                <h4 class="box53">$15 Feeds A Pet</h4>
+                                <p class="box54">Provides two weeks of healthy meals and clean bedding.</p>
+                            </div>
+                        </div>
+                        <div class="box109">
+                            <i class="fa-solid fa-syringe box110"></i>
+                            <div>
+                                <h4 class="box53">$50 Full Vaccination</h4>
+                                <p class="box54">Covers essential medical checkups and vaccinations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box111">
+                    <h3 class="box112">Make A Quick Donation</h3>
+                    <div class="box113">
+                        <button type="button" class="box114 box-amt-active" onclick="selectAmount(15, this)">$15</button>
+                        <button type="button" class="box114" onclick="selectAmount(30, this)">$30</button>
+                        <button type="button" class="box114" onclick="selectAmount(50, this)">$50</button>
+                        <button type="button" class="box114" onclick="selectAmount(100, this)">$100</button>
+                    </div>
+                    <form onsubmit="handleDonate(event)" class="box115">
+                        <input type="number" id="donateAmount" value="15" min="1" required class="box79" placeholder="Custom amount ($)">
+                        <input type="text" required class="box79" placeholder="Your Name">
+                        <button type="submit" class="box116">Donate Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="box55">
+            <div class="box56 box-reveal">
+                <h2 class="box57">Ready To Save A Life?</h2>
+                <p class="box58">Join hundreds of happy families who opened their homes to rescue pets.</p>
+                <button class="box59" onclick="document.getElementById('pets').scrollIntoView({behavior: 'smooth'})">Find Your Pet Today</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="box60">
+        <div class="box61">
+            <div class="box62">
+                <a href="#" class="box63"><i class="fa-solid fa-paw"></i> Pawsome</a>
+                <p class="box64">Dedicated to rescuing, rehabilitating, and placing abandoned animals into loving lifelong homes.</p>
+                <div class="box65">
+                    <a href="#" class="box66"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="box66"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="box66"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="box66"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="box62">
+                <h4 class="box67">Quick Links</h4>
+                <ul class="box68">
+                    <li><a href="#hero" class="box69">Home</a></li>
+                    <li><a href="#pets" class="box69">Available Pets</a></li>
+                    <li><a href="#stories" class="box69">Happy Tails</a></li>
+                    <li><a href="#tips" class="box69">Care Tips</a></li>
+                    
+                    <li><a href="#donate" class="box69">Support & Donate</a></li>
+                </ul>
+            </div>
+            <div class="box62">
+                <h4 class="box67">Contact Info</h4>
+                <p class="box69"><i class="fa-solid fa-location-dot"></i>Uzbekistan,Namangan,Oromgoh</p>
+                <p class="box69"><i class="fa-solid fa-phone"></i> +998-33-275-58-50</p>
+                <p class="box69"><i class="fa-solid fa-envelope"></i>@aakhathanov@gmail.com</p>
+            </div>
+        </div>
+        <div class="box70">
+            <p>@ 2026 Akhathanov</p>
+        </div>
+    </footer>
+
+    <div id="wishlistDrawer" class="box117">
+        <div class="box118">
+            <div class="box73">
+                <h3 class="box74">Saved Favorites</h3>
+                <button class="box75" onclick="toggleWishlist()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="wishlistItems" class="box119">
+                <p class="box120">No favorite pets saved yet. Click the heart icon on any pet card to save them here.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="adoptModal" class="box71">
+        <div class="box72">
+            <div class="box73">
+                <h3 class="box74" id="modalTitle">Adopt Pet</h3>
+                <button class="box75" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="handleAdopt(event)" class="box76">
+                <div class="box77">
+                    <label class="box78">Your Full Name</label>
+                    <input type="text" required class="box79" placeholder="Enter your name">
+                </div>
+                <div class="box77">
+                    <label class="box78">Phone Number</label>
+                    <input type="tel" required class="box79" placeholder="+998-33-275-58-50">
+                </div>
+                <div class="box77">
+                    <label class="box78">Why do you want to adopt?</label>
+                    <textarea rows="3" required class="box79" placeholder="Tell us briefly about your home"></textarea>
+                </div>
+                <button type="submit" class="box80">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="articleModal" class="box71">
+        <div class="box72">
+            <div class="box73">
+                <h3 class="box74" id="articleTitle">Care Guide</h3>
+                <button class="box75" onclick="closeArticle()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <p id="articleBody" class="box15"></p>
+            <button class="box80" onclick="closeArticle()">Got It</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
